@@ -1,0 +1,287 @@
+/*----------------------------added by Micho----------------------------------*/
+
+.tit{
+    padding-top: 2vh;
+    padding-left: 2vw;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: -10.5vw;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid #ccc;
+  background: white;
+  display: none;          /* hidden by default */
+  
+}
+
+.dropdown-menu li a{
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    color: black;
+}
+
+.dropdown-menu li {
+    cursor: pointer;
+    padding: 0.5em 1em;
+}
+
+.dropdown-menu li:hover{
+    background-color: #0572ed;
+}
+
+.dropdown {
+  position: relative;
+  display: none;
+  user-select: none;
+}
+
+.dropdown-toggle {
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+/*----------------------------------------------------------------------------*/
+
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background: #0051ba;
+    color: white;
+    padding: 1rem;
+    grid-column: 1 / -1;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-link {
+    color: white;
+    text-decoration: none;
+}
+
+/* Navigation */
+.desktop-nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 2rem;
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+/* Footer */
+footer {
+    grid-column: 1 / -1;
+    background: #0051ba;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Equipment Page Specific Styles */
+.equipment-page .section {
+    padding: 2rem;
+}
+
+.equipment-grid-large {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.equipment-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    background: white;
+
+}
+
+.equipment-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.equipment-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.equipment-item h3 {
+    padding: 1rem 1rem 0;
+    color: #0051ba;
+    font-size: 1.1rem;
+}
+
+.equipment-item p {
+    padding: 0 1rem 1rem;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.equipment-categories {
+    list-style: none;
+}
+
+.equipment-categories li {
+    margin-bottom: 0.5rem;
+}
+
+.equipment-categories a {
+    color: #0051ba;
+    text-decoration: none;
+}
+
+.equipment-categories a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.modal-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #fff;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: #bbb;
+}
+
+/* Add animation */
+.modal-content, .modal-caption {  
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0.1)} 
+    to {transform: scale(1)}
+}
+
+
+/* by Team */
+img {
+   object-fit: contain !important;
+}
+
+
+
+/* Responsive adjustments */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .equipment-grid-large {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .equipment-grid-large {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .dropdown{
+        display: inline-block;
+    }
+    
+}
+
+@media (max-width: 600px) {
+    .equipment-grid-large {
+        grid-template-columns: 1fr;
+    }
+    
+    .equipment-item img {
+        height: 220px;
+    }
+}
