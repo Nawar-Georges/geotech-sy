@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (!mobileBtn || !header) return;
 
-            mobileBtn.addEventListener('click', () => {
+                mobileBtn.addEventListener('click', () => {
                 header.classList.toggle('mobile-open');
             });
         } catch (error) {
