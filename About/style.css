@@ -1,0 +1,170 @@
+/*----------------------------added by Micho----------------------------------*/
+
+.tit{
+    padding-top: 2vh;
+    padding-left: 2vw;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: -10.5vw;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid #ccc;
+  background: white;
+  display: none;          /* hidden by default */
+  
+}
+
+.dropdown-menu li a{
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    color: black;
+}
+
+.dropdown-menu li {
+    cursor: pointer;
+    padding: 0.5em 1em;
+}
+
+.dropdown-menu li:hover{
+    background-color: #0572ed;
+}
+
+.dropdown {
+  position: relative;
+  display: none;
+  user-select: none;
+}
+
+.dropdown-toggle {
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+/*----------------------------------------------------------------------------*/
+
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background: #0051ba;
+    color: white;
+    padding: 1rem;
+    grid-column: 1 / -1;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-link {
+    color: white;
+    text-decoration: none;
+}
+
+/* Navigation */
+.desktop-nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 2rem;
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+/* Footer */
+footer {
+    grid-column: 1 / -1;
+    background: #0051ba;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .equipment-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-content {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    aside {
+        order: 2;
+        border-left: none;
+        border-top: 1px solid #ddd;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .dropdown{
+        display: inline-block;
+    }
+
+    .equipment-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        order: -1;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero {
+        padding: 2rem 1rem;
+    }
+
+    .hero-image img {
+        border-radius: 4px;
+    }
+}
